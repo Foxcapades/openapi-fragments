@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/foxcapades/openapi-fragments/master/v3/schema/error-base.json",
+  "$id": "https://raw.githubusercontent.com/foxcapades/openapi-fragments/master/v3/schema/logged-error.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Logged Error Response",
   "type": "object",

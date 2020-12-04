@@ -55,7 +55,7 @@
 
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json"
+      "$ref": "./error-base.json"
     },
     {
       "$ref": "#/definitions/root-error"
