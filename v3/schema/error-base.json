@@ -1,0 +1,22 @@
+{
+  "$id": "https://raw.githubusercontent.com/foxcapades/openapi-fragments/master/v3/schema/error-base.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Basic Error Response",
+  "type": "object",
+  "properties": {
+    "code": {
+      "$ref": "./error-code.json"
+    },
+    "type": {
+      "$ref": "./error-type.json"
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "code",
+    "type",
+    "message"
+  ]
+}

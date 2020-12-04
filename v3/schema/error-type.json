@@ -1,0 +1,32 @@
+{
+  "$id": "https://raw.githubusercontent.com/foxcapades/openapi-fragments/master/v3/schema/error-type.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "string",
+  "enum": [
+    "bad-request",
+    "unauthorized",
+    "forbidden",
+    "not-found",
+    "method-not-allowed",
+    "not-acceptable",
+    "request-timeout",
+    "conflict",
+    "gone",
+    "length-required",
+    "failed-precondition",
+    "body-too-large",
+    "uri-too-long",
+    "unsupported-media-type",
+    "invalid-range",
+    "failed-expectation",
+    "i-am-a-teapot",
+    "enhance-your-calm",
+    "unprocessable-entity",
+    "resource-locked",
+    "too-early",
+    "too-many-requests",
+    "headers-too-large",
+    "server-error",
+    "not-implemented"
+  ]
+}

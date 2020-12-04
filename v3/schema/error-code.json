@@ -1,0 +1,32 @@
+{
+  "$id": "https://raw.githubusercontent.com/foxcapades/openapi-fragments/master/v3/schema/error-code.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "integer",
+  "enum": [
+    400,
+    401,
+    403,
+    404,
+    405,
+    406,
+    408,
+    409,
+    410,
+    411,
+    412,
+    413,
+    414,
+    415,
+    416,
+    417,
+    418,
+    420,
+    422,
+    423,
+    425,
+    429,
+    431,
+    500,
+    501
+  ]
+}

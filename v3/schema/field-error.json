@@ -1,0 +1,64 @@
+{
+  "$id": "https://raw.githubusercontent.com/foxcapades/openapi-fragments/master/v3/schema/field-error.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "definitions": {
+    "body": {
+      "type": "object"
+    },
+    "field-ref": {
+      "description": "Name or ID of the field this error applies to.",
+      "type": "string"
+    },
+    "error-msg": {
+      "description": "Field specific error message.",
+      "type": "string"
+    },
+    "field-error": {
+      "type": "object",
+      "properties": {
+        "field": {
+          "$ref": "#/definitions/field-ref"
+        },
+        "msg": {
+          "$ref": "#/definitions/error-msg"
+        }
+      },
+      "required": [
+        "field"
+      ]
+    },
+    "root-error": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/field-error"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "related": {
+              "description": "Other fields impacted by or related to this error.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/field-error",
+                "required": [
+                  "field",
+                  "error"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+
+  "allOf": [
+    {
+      "$ref": "./error-base.json"
+    },
+    {
+      "$ref": "#/definitions/root-error"
+    }
+  ],
+}
