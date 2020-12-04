@@ -1,0 +1,12 @@
+description: |
+  One or more request fields failed input validation.
+
+  The response error will include details about the field(s) found to be in
+  error.
+content:
+  application/json:
+    schema:
+      $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/field-error.json
+  application/xml:
+    schema:
+      $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/field-error.json

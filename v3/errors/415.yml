@@ -1,0 +1,8 @@
+description: The format of the request entity is not supported by this server.
+content:
+  application/json:
+    schema:
+      $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+  application/xml:
+    schema:
+      $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json

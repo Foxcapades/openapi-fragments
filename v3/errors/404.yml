@@ -1,0 +1,8 @@
+description: The requested resource could not be found.
+content:
+  application/json:
+    schema:
+      $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+  application/xml:
+    schema:
+      $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json

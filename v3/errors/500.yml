@@ -1,0 +1,9 @@
+description: |
+  An unhandled server exception occurred while processing the request.
+content:
+  application/json:
+    schema:
+      $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+  application/xml:
+    schema:
+      $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
