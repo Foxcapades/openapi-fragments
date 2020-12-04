@@ -28,19 +28,23 @@
       "title": "Error specific to the target field.",
       "type": "object",
       "properties": {
-        "msg": {
+        "message": {
           "$ref": "#/definitions/error-msg"
         },
         "related": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/related"
+          },
+          "xml": {
+            "name": "field",
+            "wrapped": true
           }
         }
       },
       "required": [
         "field",
-        "msg"
+        "message"
       ]
     },
 
@@ -50,23 +54,32 @@
         "field": {
           "$ref": "#/definitions/field-ref"
         },
-        "msg": {
+        "message": {
           "$ref": "#/definitions/error-msg"
         }
       },
       "required": [
         "field"
-      ]
+      ],
+      "xml": {
+        "name": "field"
+      }
     },
 
     "field-ref": {
       "description": "Name or ID of the field this error applies to.",
-      "type": "string"
+      "type": "string",
+      "xml": {
+        "name": "field"
+      }
     },
 
     "error-msg": {
       "description": "Field specific error message.",
-      "type": "string"
+      "type": "string",
+      "xml": {
+        "name": "message"
+      }
     }
   },
 

@@ -3,10 +3,17 @@ content:
   application/json:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+    example:
+      code: 406
+      type: not-acceptable
+      message: The server cannot not fulfill requests for the requested content type.
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
-example:
-  code: 406
-  type: not-acceptable
-  message: The server cannot not fulfill requests for the requested content type.
+    example: |
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <error>
+        <code>406</code>
+        <type>not-acceptable</type>
+        <message>The server cannot not fulfill requests for the requested content type.</message>
+      </error>

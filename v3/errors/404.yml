@@ -3,10 +3,17 @@ content:
   application/json:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+    example:
+      code: 404
+      type: not-found
+      message: The requested resource could not be found.
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
-example:
-  code: 404
-  type: not-found
-  message: The requested resource could not be found.
+    example: |
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <error>
+        <code>404</code>
+        <type>not-found</type>
+        <message>The requested resource could not be found.</message>
+      </error>

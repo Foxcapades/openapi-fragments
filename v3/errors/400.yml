@@ -3,10 +3,17 @@ content:
   application/json:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+      example:
+        code: 400
+        type: bad-request
+        message: "JSON syntax error at character 549: unexpected object start"
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
-example:
-  code: 400
-  type: bad-request
-  message: "JSON syntax error at character 549: unexpected object start"
+    example: |
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <error>
+        <code>400</code>
+        <type>bad-request</type>
+        <message>JSON syntax error at character 549: unexpected object start</message>
+      </error>

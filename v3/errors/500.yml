@@ -4,11 +4,19 @@ content:
   application/json:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/logged-error.json
+    example:
+      code: 500
+      type: server-error
+      requestId: 123456
+      message: An unhandled server exception occurred while processing the request.
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/logged-error.json
-example:
-  code: 500
-  type: server-error
-  requestId: 123456
-  message: An unhandled server exception occurred while processing the request.
+    example: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <error>
+        <code>500</code>
+        <type>server-error</type>
+        <requestId>123456</requestId>
+        <message>An unhandled server exception occurred while processing the request.</message>
+      </error>

@@ -3,10 +3,17 @@ content:
   application/json:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+    example:
+      code: 401
+      type: unauthorized
+      message: This endpoint requres a valid auth token.
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
-example:
-  code: 401
-  type: unauthorized
-  message: This endpoint requres a valid auth token.
+    example: |
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <error>
+        <code>401</code>
+        <type>unauthorized</type>
+        <message>This endpoint requres a valid auth token.</message>
+      </error>

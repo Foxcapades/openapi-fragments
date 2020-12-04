@@ -3,10 +3,17 @@ content:
   application/json:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+    example:
+      code: 415
+      type: unsupported-media-type
+      message: The format of the request entity is not supported by this server.
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
-error:
-  code: 415
-  type: unsupported-media-type
-  message: The format of the request entity is not supported by this server.
+    example: |
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <error>
+        <code>415</code>
+        <type>unsupported-media-type</type>
+        <message>The format of the request entity is not supported by this server.</message>
+      </error>

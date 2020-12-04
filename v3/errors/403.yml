@@ -3,10 +3,17 @@ content:
   application/json:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+    example:
+      code: 403
+      type: forbidden
+      message: The requested action is not permitted on this resource.
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
-error:
-  code: 403
-  type: forbidden
-  message: The requested action is not permitted on this resource.
+    example: |
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <error>
+        <code>403</code>
+        <type>forbidden</type>
+        <message>The requested action is not permitted on this resource.</message>
+      </error>

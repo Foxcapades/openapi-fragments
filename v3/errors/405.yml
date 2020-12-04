@@ -3,10 +3,17 @@ content:
   application/json:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+    example:
+      code: 405
+      type: method-not-allowed
+      message: The HTTP request method used is not supported by this endpoint.
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
-example:
-  code: 405
-  type: method-not-allowed
-  message: The HTTP request method used is not supported by this endpoint.
+    example: |
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <error>
+        <code>405</code>
+        <type>method-not-allowed</type>
+        <message>The HTTP request method used is not supported by this endpoint.</message>
+      </error>

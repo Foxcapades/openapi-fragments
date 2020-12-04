@@ -3,12 +3,19 @@ content:
   application/json:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+    example:
+      code: 409
+      type: conflict
+      message: |
+        The target resource already exists.  Please choose a different resource
+        identifier or delete the existing resource before resubmitting.
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
-error:
-  code: 409
-  type: conflict
-  message: |
-    The target resource already exists.  Please choose a different resource
-    identifier or delete the exising resource before resubmitting.
+    example: |
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <error>
+        <code>409</code>
+        <type>conflict</type>
+        <message>The target resource already exists.  Please choose a different resource identifier or delete the existing resource before resubmitting.</message>
+      </error>

@@ -5,18 +5,30 @@
   "type": "object",
   "properties": {
     "code": {
-      "$ref": "https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-code.json"
+      "$ref": "https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-code.json",
+      "xml": {
+        "name": "code"
+      }
     },
     "type": {
-      "$ref": "https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-type.json"
+      "$ref": "https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-type.json",
+      "xml": {
+        "name": "type"
+      }
     },
     "message": {
-      "type": "string"
+      "type": "string",
+      "xml": {
+        "name": "message"
+      }
     }
   },
   "required": [
     "code",
     "type",
     "message"
-  ]
+  ],
+  "xml": {
+    "name": "error"
+  }
 }

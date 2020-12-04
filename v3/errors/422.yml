@@ -7,19 +7,39 @@ content:
   application/json:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/field-error.json
+    example:
+      code: 422
+      type: unprocessable-entity
+      message: One or more fields contain invalid input values.
+      errors:
+        - field: username
+          errors:
+            - msg: username length must be greater than 3
+        - field: url-upload
+          errors:
+            - msg: cannot be used with file-upload
+              related:
+                - field: file-upload
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/field-error.json
-example:
-  code: 422
-  type: unprocessable-entity
-  message: One or more fields contain invalid input values.
-  errors:
-  - field: username
-    errors:
-    - msg: must be greater than 3
-  - field: url-upload
-    errors:
-    - msg: cannot be used with file-upload
-      related:
-      - field: file-upload
+    example: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <error>
+        <code>422</code>
+        <type>unprocessable-entity</type>
+        <message>An unhandled server exception occurred while processing the request.</message>
+        <errors>
+          <error>
+            <field>username</field>
+            <message>username length must be greater than 3</message>
+          </error>
+          <error>
+            <field>url-upload</field>
+            <message>cannot be used with file-upload</message>
+            <related>
+              <field>file-upload</field>
+            </related>
+          </error>
+        </errors>
+      </error>
