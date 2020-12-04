@@ -5,10 +5,10 @@
   "type": "object",
   "properties": {
     "code": {
-      "$ref": "./error-code.json"
+      "$ref": "https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-code.json"
     },
     "type": {
-      "$ref": "./error-type.json"
+      "$ref": "https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-type.json"
     },
     "message": {
       "type": "string"
