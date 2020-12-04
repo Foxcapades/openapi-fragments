@@ -1,0 +1,24 @@
+{
+  "$id": "https://raw.githubusercontent.com/foxcapades/openapi-fragments/master/v3/schema/error-base.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Logged Error Response",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./error-base.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "requestId": {
+          "title": "Request ID",
+          "description": "A unique identifier for the request that returned this error response.  This ID may be used to file a bug report.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "requestId"
+      ]
+    }
+  ],
+}
