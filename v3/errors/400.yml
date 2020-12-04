@@ -6,3 +6,7 @@ content:
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+example:
+  code: 400
+  type: bad-request
+  message: "JSON syntax error at character 549: unexpected object start"

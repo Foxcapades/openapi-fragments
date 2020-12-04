@@ -7,3 +7,7 @@ content:
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+example:
+  code: 416
+  type: invalid-range
+  message: The requested range is invalid or out of bounds for the target file.

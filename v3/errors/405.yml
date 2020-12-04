@@ -6,3 +6,7 @@ content:
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+example:
+  code: 405
+  type: method-not-allowed
+  message: The HTTP request method used is not supported by this endpoint.

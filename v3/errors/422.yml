@@ -10,3 +10,16 @@ content:
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/field-error.json
+example:
+  code: 422
+  type: unprocessable-entity
+  message: One or more fields contain invalid input values.
+  errors:
+  - field: username
+    errors:
+    - msg: must be greater than 3
+  - field: url-upload
+    errors:
+    - msg: cannot be used with file-upload
+      related:
+      - field: file-upload

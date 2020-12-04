@@ -6,3 +6,9 @@ content:
   application/xml:
     schema:
       $ref: https://raw.githubusercontent.com/Foxcapades/openapi-fragments/main/v3/schema/error-base.json
+error:
+  code: 409
+  type: conflict
+  message: |
+    The target resource already exists.  Please choose a different resource
+    identifier or delete the exising resource before resubmitting.

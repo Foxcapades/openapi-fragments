@@ -3,18 +3,48 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
 
   "definitions": {
-    "body": {
-      "type": "object"
+    "base-error": {
+      "description": "Field error root extension",
+      "type": "object",
+      "properties": {
+        "field": {
+          "$ref": "#/definitions/field-ref"
+        },
+        "errors": {
+          "description": "A list of errors related to the target field identified by the \"field\" property on this object.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/field-error"
+          }
+        }
+      },
+      "required": [
+        "field",
+        "errors"
+      ]
     },
-    "field-ref": {
-      "description": "Name or ID of the field this error applies to.",
-      "type": "string"
-    },
-    "error-msg": {
-      "description": "Field specific error message.",
-      "type": "string"
-    },
+
     "field-error": {
+      "title": "Error specific to the target field.",
+      "type": "object",
+      "properties": {
+        "msg": {
+          "$ref": "#/definitions/error-msg"
+        },
+        "related": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/related"
+          }
+        }
+      },
+      "required": [
+        "field",
+        "msg"
+      ]
+    },
+
+    "related": {
       "type": "object",
       "properties": {
         "field": {
@@ -28,28 +58,15 @@
         "field"
       ]
     },
-    "root-error": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/field-error"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "related": {
-              "description": "Other fields impacted by or related to this error.",
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/field-error",
-                "required": [
-                  "field",
-                  "error"
-                ]
-              }
-            }
-          }
-        }
-      ]
+
+    "field-ref": {
+      "description": "Name or ID of the field this error applies to.",
+      "type": "string"
+    },
+
+    "error-msg": {
+      "description": "Field specific error message.",
+      "type": "string"
     }
   },
 
@@ -58,7 +75,15 @@
       "$ref": "./error-base.json"
     },
     {
-      "$ref": "#/definitions/root-error"
+      "type": "object",
+      "properties": {
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/base-error"
+          }
+        }
+      }
     }
-  ],
+  ]
 }
