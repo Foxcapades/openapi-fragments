@@ -28,7 +28,7 @@ content:
       <error>
         <code>422</code>
         <type>unprocessable-entity</type>
-        <message>An unhandled server exception occurred while processing the request.</message>
+        <message>One or more request fields failed input validation.</message>
         <errors>
           <error>
             <field>username</field>
